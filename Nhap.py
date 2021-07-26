@@ -17,7 +17,8 @@ DataType = {
     "FLOAT32": 0x7fc00000,
     "SEFLOAT": 0xffffffff,
     "STRING": ""
-}
+} 
+
 
 class registerDataType(enum.Enum):
     UINT16 = 1
