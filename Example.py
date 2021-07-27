@@ -14,7 +14,7 @@ client_1 = ModbusClient(host="127.0.0.1", port=502)
 conection = client_1.connect()
 print(conection)
 client = InfluxDBClient('localhost', 8086, 'admin', 'Password1', 'mydb')
-# client.create_database('mydb')
+client.create_database('mynewdb')
 client.get_list_database()
 client.switch_database('mynewdb')
 

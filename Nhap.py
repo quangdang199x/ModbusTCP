@@ -3,7 +3,6 @@ import time
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadDecoder
-
 # client = ModbusClient(host= "127.0.0.1", port = 502)
 # conection = client.connect()
 # print(conection)
@@ -83,16 +82,24 @@ class MyDevice():
     def connect(self):
         return self.client.connect()
 
-Inverter = MyDevice(host = "127.0.0.1", port = 502, unit=1, timeout=1, retries=3)
-print(Inverter.connect())
 
-voltage = Inverter._read_holding_registers(address=40001, length=2)
-voltage_1 = Inverter._decode_value(Inverter._read_holding_registers(address=40001, length=2), length = 2, dtype = 2, vtype=2)
-
-
+# voltage = Inverter._read_holding_registers(address=40001, length=2)
+# voltage_1 = BinaryPayloadDecoder.fromRegisters(voltage.registers, byteorder=Endian.Big)
+# result_voltage = voltage_1.decode_32bit_uint()
+# print(result_voltage)
 
 
+# voltage_1 = Inverter._decode_value(Inverter._read_holding_registers(address=40001, length=2), length = 2, dtype = 2, vtype=2)
 
+
+
+
+client = ModbusClient(host="127.0.0.1",port=502)
+print(client.connect())
+result = client.read_holding_registers(40001,2,unit =1)
+voltage = BinaryPayloadDecoder.fromRegisters(result.registers, byteorder=Endian.Big)
+voltage_1 = voltage.decode_32bit_uint()
+print(voltage_1)
 
 
 
