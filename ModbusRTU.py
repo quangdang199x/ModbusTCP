@@ -6,7 +6,7 @@ import enum
 from pymodbus.constants import Endian
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 from pymodbus.payload import BinaryPayloadDecoder
-client = ModbusClient(method="rtu", port = "COM6", baudrate = 19200, stopbits = 1, bytesize = 8, parity = 'E',)
+client = ModbusClient(method="rtu", port = "COM2", baudrate = 19200, stopbits = 1, bytesize = 8, parity = 'E',)
 conection = client.connect()
 # import logging
 # logging.basicConfig()

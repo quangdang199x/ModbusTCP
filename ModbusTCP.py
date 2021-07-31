@@ -2,9 +2,6 @@ import pymodbus
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 import time
 from twisted.internet.defer import Deferred
-from pymodbus.constants import Endian
-from pymodbus.framer.socket_framer import ModbusSocketFramer
-from pymodbus.transaction import ModbusRtuFramer
 
 client = ModbusClient(host="127.0.0.1", port=502)
 conection = client.connect()
@@ -19,7 +16,6 @@ class ScaleFactor:
     FIX1 = 0.1
     FIX2 = 0.01
     FIX3 = 0.001
-    pass
 
 def myProject():
     result = client.read_holding_registers(40001, 50, unit = 1)
