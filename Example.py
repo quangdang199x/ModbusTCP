@@ -77,15 +77,15 @@ def myField():
     }
     json_payload.append(data)
 
-#Send our payload:
+    #Send our payload:
     client.write_points(json_payload)
-# while True:
-# myField()
-    payload = client.query('select * from Inverter_1;')
-    time.sleep(5)
+    # while True:
+    # myField()
+    myPayload = client.query('select * from Inverter_1;')
+    # time.sleep(5)
     # print(data)
     # print(json_payload)
-    print(payload)
+    print("Running")
 while True:
     myField()
-    time.sleep(10)
+    time.sleep(5)
