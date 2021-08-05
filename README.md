@@ -1,19 +1,15 @@
 TÌM HIỂU GIAO THỨC TRUYỀN THÔNG MODBUS TCP/IP
 
-# -------------------------------------------------------------------------------------------#
-I. Đọc 1 Inverter giả lập bằng Modbus TCP, sử dụng thư viện pymodbus:
-# pip install pymodbus
+# -------------------------------------------------------- 
+# I. Đọc 1 Inverter giả lập bằng Modbus TCP, sử dụng thư viện pymodbus:
 
-# Phần code:
+[
 import pymodbus
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 import time
 from twisted.internet.defer import Deferred
-
 client = ModbusClient(host="127.0.0.1", port=502)
 conection = client.connect()
-# print(conection)
-
 class ScaleFactor:
     GAIN0 = 1
     GAIN1 = 10
@@ -23,7 +19,6 @@ class ScaleFactor:
     FIX1 = 0.1
     FIX2 = 0.01
     FIX3 = 0.001
-
 def myRegisters():
     result = client.read_holding_registers(40001, 50, unit = 1)
     currentPhaseA = (result.registers[0] << 16 | result.registers[1])*ScaleFactor.FIX3
@@ -42,8 +37,6 @@ def myRegisters():
     mpptCurrent1 = (result.registers[31] << 16 | result.registers[32])*ScaleFactor.FIX3
     mpptVoltage1 = (result.registers[33] << 16 | result.registers[34])*ScaleFactor.FIX2
     mpptPower1 = (result.registers[35] << 16 | result.registers[36])*ScaleFactor.FIX0
-
-
     print("currentPhaseA: %sA" %currentPhaseA)
     print("currentPhaseB: %sA" %currentPhaseB)
     print("currentPhaseC: %sA" %currentPhaseC)
@@ -60,13 +53,13 @@ def myRegisters():
     print("mpptCurrent1: %sA" %mpptCurrent1)
     print("mpptVoltage1: %sV" %mpptVoltage1)
     print("mpptPower1: %sW" %mpptPower1)
-
 while True:
     myRegisters()
     print("\n")
     time.sleep(10)
+]
 
-# Kết quả mô phỏng:
+####=> Kết quả mô phỏng:
 currentPhaseA: 13.775A
 currentPhaseB: 11.411A
 currentPhaseC: 12.558A
@@ -85,13 +78,12 @@ mpptVoltage1: 733.42V
 mpptPower1: 3986W
 
 
-# ---------------------------------------------------------------------------------------------- #
-II. Lưu dữ liệu vào Influxdb và hiển thị dữ liệu lên Grafana:
-Cài đặt thư viện:
-# pip install influxdb
-
-# Phần code:
-
+# -----------------------------------------------------------
+# II. Lưu dữ liệu vào Influxdb và hiển thị dữ liệu lên Grafana:
+#Cài đặt thư viện:
+#pip install influxdb
+#Phần code:
+[
 from dateutil.parser import DEFAULTPARSER
 from pymodbus import payload
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
@@ -100,7 +92,6 @@ from twisted.internet.defer import Deferred
 import json
 from influxdb import InfluxDBClient, client
 from datetime import datetime
-
 #Setup database:
 client_1 = ModbusClient(host="127.0.0.1", port=502)
 conection = client_1.connect()
@@ -109,7 +100,6 @@ client = InfluxDBClient('localhost', 8086, 'admin', 'Password1', 'mydb')
 client.create_database('mynewdb')
 client.get_list_database()
 client.switch_database('mynewdb')
-
 class ScaleFactor:
     GAIN0 = 1
     GAIN1 = 10
@@ -138,7 +128,6 @@ def myField():
     mpptCurrent1 = (result.registers[31] << 16 | result.registers[32])*ScaleFactor.FIX3
     mpptVoltage1 = (result.registers[33] << 16 | result.registers[34])*ScaleFactor.FIX2
     mpptPower1 = (result.registers[35] << 16 | result.registers[36])*ScaleFactor.FIX0
-
     #Setup Payload:
     json_payload = []
     current_time = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
@@ -174,29 +163,28 @@ def myField():
 while True:
     myField()
     time.sleep(5)
+]
 
-# Kết quả mô phỏng cho 1 payload:
+####=> Kết quả mô phỏng cho 1 payload:
 C:\Users\phamd\OneDrive\Máy tính\Study\Modbus_TCP-RTU-main\Modbus_TCP-RTU-main>python Example.py
 ResultSet({'('Inverter_1', None)': [{'time': '2021-07-26T09:59:13Z', 'currentPhaseA': 35.536, 'currentPhaseB': 50.433, 'currentPhaseC': 46.982, 'dailyYield': 48263, 'frequency': 48.99, 'mpptCurrent1': 5.372, 'mpptPower1': 3986, 'mpptVoltage1': 733.42, 'operatingTime': 8578792, 'powerPhaseA': 8342, 'powerPhaseB': 7569, 'powerPhaseC': 8623, 'totalYield': 47552185, 'voltagePhaseA': 236.15, 'voltagePhaseB': 237.05, 'voltagePhaseC': 238.07}]})
 
 
-# -------------------------------------------------------------------------------------------- #
-III. Sử dụng MQTT để public dữ liệu lên localhost và subscribe dữ liệu từ localhost về:
-# cài đặt thư viện: pip install paho-mqtt
-# cài đặt mosquitto về máy
+# -------------------------------------------------------------------------
+# III. Sử dụng MQTT để public dữ liệu lên localhost và subscribe dữ liệu từ localhost về:
+#cài đặt thư viện: pip install paho-mqtt
+#cài đặt mosquitto về máy
 
-# Phần code cho mqtt public:
+#Phần code cho mqtt public:
+[
 import time
 import paho.mqtt.client as paho
 import sys
 import ModbusTCP
-# import Example
-
 client = paho.Client()
 if client.connect("localhost", 1883,  60) != 0:
     print("Could not connect to MQTT Broker!")
     sys.exit(-1)
-
 count = 0
 while count != 10:
     print(f"Running...{count}")
@@ -219,11 +207,11 @@ while count != 10:
     client.publish("value", " ", 0)
     count += 1
     time.sleep(10)
-    
 print("Disconnected")
 client.disconnect()
+]
 
-# Kết quả public dữ liệu lên localhost:
+####=> Kết quả public dữ liệu lên localhost:
 PS C:\Program Files\Mosquitto> ./mosquitto_sub -t value
 currentPhaseA: 15.052A
 currentPhaseB: 12.688A
@@ -242,20 +230,17 @@ mpptCurrent1: 5.372A
 mpptVoltage1: 733.42V
 mpptPower1: 3986W
 
-# Phần code cho mqtt subscribe:
+#Phần code cho mqtt subscribe:
+[
 import paho.mqtt.client as paho
 import sys
-
 def onMessage(client, userdata, msg):
     print(msg.topic +": " + msg.payload.decode())
-
 client = paho.Client()
 client.on_message = onMessage
-
 if client.connect("localhost", 1883,  60) != 0:
     print("Could not connect to MQTT Broker!")
     sys.exit(-1)
-
 client.subscribe("value")
 try: 
     print("Connecting...")
@@ -264,8 +249,9 @@ except:
     print("Disconnecting from Broker")
 
 client.disconnect()
+]
 
-# Kết quả subscribe dữ liệu từ localhost về:
+####=> Kết quả subscribe dữ liệu từ localhost về:
 C:\Users\phamd\OneDrive\Máy tính\Study\Modbus_TCP-RTU-main\Modbus_TCP-RTU-main>python mqtt_sub.py
 Connecting...
 value: currentPhaseA: 15.294A
