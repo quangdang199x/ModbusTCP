@@ -12,9 +12,8 @@ if client.connect("localhost", 1883,  60) != 0:
     sys.exit(-1)
 
 client.subscribe("value")
-
 try: 
-    print("Press CRL+C to exit...")
+    print("Connecting...")
     client.loop_forever()
 except:
     print("Disconnecting from Broker")

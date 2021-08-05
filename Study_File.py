@@ -14,17 +14,7 @@
 
 # guess(10)
 
-
-import paho.mqtt.client as mqtt
-from random import randrange, uniform
-import time
-
-mqqtBroker  = "mqtt.eclipseprojects.io"
-client = mqtt.Client("Temperature")
-client.connect(mqqtBroker) 
-
-while True:
-    randNumber = uniform(20.0,21.0)
-    client.publish("TEMPERATURE", randNumber)
-    print("Just publish "+str(randNumber)+ " to Topic TEMPERATURE" )
-    time.sleep(2)
+count = 0
+while count != 10:
+    print(count)
+    count += 1
