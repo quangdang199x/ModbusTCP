@@ -36,6 +36,27 @@ mpptCurrent1 = (result.registers[31] << 16 | result.registers[32])*ScaleFactor.F
 mpptVoltage1 = (result.registers[33] << 16 | result.registers[34])*ScaleFactor.FIX2
 mpptPower1 = (result.registers[35] << 16 | result.registers[36])*ScaleFactor.FIX0
 
+def myValue():
+    Va = f"voltagePhaseA: {voltagePhaseA}V"
+    Vb = f"voltagePhaseB: {voltagePhaseB}V"
+    Vc = f"voltagePhaseC: {voltagePhaseC}"
+    Ia = f"currentPhaseA: {currentPhaseA}"
+    Ib = f"currentPhaseB: {currentPhaseB}"
+    Ic = f"currentPhaseC: {currentPhaseC}"
+    Pa = f"powerPhaseA: {powerPhaseA}"
+    Pb = f"powerPhaseB: {powerPhaseB}"
+    Pc = f"powerPhaseC: {powerPhaseC}"
+    F = f"frequency: {frequency}"
+    tY = f"totalEnergy: {totalYield}"
+    dY = f"dailyEnergy: {dailyYield}"
+    oT = f"operatingTime: {operatingTime}"
+    mpptA1 = f"mpptCurrent1: {mpptCurrent1}"
+    mpptV1 = f"mpptVoltage1: {mpptVoltage1}"
+    mpptP1 = f"mpptPower1: {mpptPower1}" 
+
+    
+print(type(myValue()))
+
 # print("currentPhaseA: %sA" %currentPhaseA)
 # print("currentPhaseB: %sA" %currentPhaseB)
 # print("currentPhaseC: %sA" %currentPhaseC)
@@ -58,5 +79,3 @@ mpptPower1 = (result.registers[35] << 16 | result.registers[36])*ScaleFactor.FIX
 #     print("\n")
 #     time.sleep(10)
 
-value = [currentPhaseA, currentPhaseB, currentPhaseC, voltagePhaseA, voltagePhaseB, voltagePhaseC, powerPhaseA, powerPhaseB, powerPhaseC]
-print(type(value))

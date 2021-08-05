@@ -11,7 +11,7 @@ if client.connect("localhost", 1883,  60) != 0:
     print("Could not connect to MQTT Broker!")
     sys.exit(-1)
 
-client.subscribe("test/status")
+client.subscribe("value")
 
 try: 
     print("Press CRL+C to exit...")
