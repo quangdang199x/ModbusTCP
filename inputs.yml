@@ -1,0 +1,65 @@
+devices: 
+  - id: ABB-115179-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.108
+      port: 502
+     modbusUnitId: 1  # slave address
+  - id: ABB-115190-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.106
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-115228-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.107
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-114589-3Q15-3720
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.103
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-115172-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.105
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-115201-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.104
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-115164-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.102
+      port: 502
+      modbusUnitId: 1  # slave address
+  - id: ABB-115146-3Q15-4020
+    type: inverter
+    manufacturer: ABB
+    model: PVS100
+    params:
+      ip: 192.168.1.101
+      port: 502
+      modbusUnitId: 1  # slave address
