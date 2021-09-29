@@ -12,9 +12,9 @@
 
 2. Nhập vào file "inputs.yml" tại site cần check;
 
-3. Vào file "runtime.log" để xem thông tin và chỉnh sửa lại nếu số serial của file input khác với sô SN đọc ở inverter.
+3. Vào file "runtime.log" để xem thông tin và chỉnh sửa lại nếu số serial của file input khác với số serial đọc ở inverter.
 
-- Sẽ có 3 trường hợp:
+### Sẽ có 3 trường hợp:
 
 + Không kết nối vào được IP/port của Inverter. Cần kiểm tra lại xem đúng IP đích chưa.
 
