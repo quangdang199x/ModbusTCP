@@ -1,0 +1,122 @@
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56292)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14137, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:Serial number '115179-3Q15-4020' is correct.
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56294)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x2 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x2 0x3 0x10 0x31 0x31 0x35 0x31 0x39 0x30 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x2 0x3 0x10 0x31 0x31 0x35 0x31 0x39 0x30 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14640, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:Serial number '115190-3Q15-4020' is correct.
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56295)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x3 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x3 0x3 0x10 0x31 0x31 0x35 0x32 0x32 0x38 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x3 0x3 0x10 0x31 0x31 0x35 0x32 0x32 0x38 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13618, 12856, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:Serial number '115228-3Q15-4020' is correct.
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56296)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x4 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x4 0x3 0x10 0x31 0x31 0x34 0x35 0x38 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x33 0x37 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x4 0x3 0x10 0x31 0x31 0x34 0x35 0x38 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x33 0x37 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13365, 14393, 11571, 20785, 13613, 13111, 12848]
+DEBUG:root:Serial number '114589-3Q15-3720' is correct.
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56297)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14137, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:IP: '127.0.0.1' ModbusUnitID: 1. Need to change input serial number from '115172-3Q15-4020' to '115179-3Q15-4020'
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56298)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14137, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:IP: '127.0.0.1' ModbusUnitID: 1. Need to change input serial number from '115201-3Q15-4020' to '115179-3Q15-4020'
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56299)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14137, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:IP: '127.0.0.1' ModbusUnitID: 1. Need to change input serial number from '115164-3Q15-4020' to '115179-3Q15-4020'
+DEBUG:pymodbus.client.sync:Connection to Modbus server established. Socket ('127.0.0.1', 56300)
+DEBUG:pymodbus.transaction:Current transaction state - IDLE
+DEBUG:pymodbus.transaction:Running transaction 1
+DEBUG:pymodbus.transaction:SEND: 0x0 0x1 0x0 0x0 0x0 0x6 0x1 0x3 0x9c 0x74 0x0 0x8
+DEBUG:pymodbus.client.sync:New Transaction state 'SENDING'
+DEBUG:pymodbus.transaction:Changing transaction state from 'SENDING' to 'WAITING FOR REPLY'
+DEBUG:pymodbus.transaction:Changing transaction state from 'WAITING FOR REPLY' to 'PROCESSING REPLY'
+DEBUG:pymodbus.transaction:RECV: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.framer.socket_framer:Processing: 0x0 0x1 0x0 0x0 0x0 0x13 0x1 0x3 0x10 0x31 0x31 0x35 0x31 0x37 0x39 0x2d 0x33 0x51 0x31 0x35 0x2d 0x34 0x30 0x32 0x30
+DEBUG:pymodbus.factory:Factory Response[ReadHoldingRegistersResponse: 3]
+DEBUG:pymodbus.transaction:Adding transaction 1
+DEBUG:pymodbus.transaction:Getting transaction 1
+DEBUG:pymodbus.transaction:Changing transaction state from 'PROCESSING REPLY' to 'TRANSACTION_COMPLETE'
+DEBUG:pymodbus.payload:[12593, 13617, 14137, 11571, 20785, 13613, 13360, 12848]
+DEBUG:root:IP: '127.0.0.1' ModbusUnitID: 1. Need to change input serial number from '115146-3Q15-4020' to '115179-3Q15-4020'
+DEBUG:root:Finish checking the serial number. Need to fix: 4 serial number.
+DEBUG:root:No connection: 0

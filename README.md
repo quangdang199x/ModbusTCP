@@ -2,9 +2,9 @@
 
 ## Tổng quan:
 
-+ Mục đích của chương trình này là kiểm tra tính chính xác của serial number giữa file inputs.yml và serial number đọc được từ Inverter. Giúp cho số liệu thu về được đúng với thiết bị.
++ Mục đích của chương trình này là kiểm tra tính chính xác của serial number giữa file "inputs.yml" và serial number đọc được từ Inverter. Giúp cho số liệu thu về được đúng với thiết bị.
 
-+ Để xác định được Inverter nào thì sẽ thông qua địa chỉ IP/port và ModbusUnitID.
++ Để xác định được Inverter nào thì sẽ thông qua địa chỉ IP/port và ModbusUnitID (các thông số này sẽ lấy ở file "inputs.yml").
 
 ## Các bước tiến hành kiểm tra serial number:
 
