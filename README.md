@@ -10,7 +10,7 @@
 
 1. Chạy file "checkSN.py";
 
-2. Nhập vào file "inputs.yml" tại site cần check;
+2. Nhập vào đường dẫn file "inputs.yml" tại site cần check;
 
 3. Vào file "runtime.log" để xem thông tin và chỉnh sửa lại nếu số serial của file input khác với số serial đọc ở inverter.
 
